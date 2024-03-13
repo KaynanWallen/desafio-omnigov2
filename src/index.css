@@ -13,15 +13,6 @@ h2 {
   font-weight: 600;
 }
 
-@keyframes spin {
-  to {
-      transform: rotate(-360deg);
-  }
-}
-.animate-spin {
-  animation: spin 1s linear infinite;
-}
-
 .custom-checkbox input[type="checkbox"] {
   appearance: none;
   width: 16px;
