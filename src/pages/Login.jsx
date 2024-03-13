@@ -41,7 +41,7 @@ export default function Login() {
     //Layouts Alterados em forma de State para otimização
     const [buttontext, setButtonText] = useState("Entrar")
     const [buttonIcon, setButtonIcon] = useState()
-    const [buttonBackground, setButtonBackground] = useState("bg-[#0101FF]")
+    const [buttonBackground, setButtonBackground] = useState("bg-[#00C]")
     const [buttontextRegister, setButtonTextRegister] = useState("Enviar")
 
 
@@ -51,14 +51,14 @@ export default function Login() {
             case 'idle':
                 setButtonText("Entrar")
                 setButtonIcon()
-                setButtonBackground("bg-[#0101FF]")
+                setButtonBackground("bg-[#00C]")
                 setButtonTextRegister('Enviar')
                 break
             case 'loading':
                 setButtonText("Entrando...")
                 setButtonTextRegister('Enviando')
                 setButtonIcon(loading)
-                setButtonBackground("bg-[#0101FF]")
+                setButtonBackground("bg-[#00C]")
 
                 break
             case 'error' :
@@ -77,7 +77,7 @@ export default function Login() {
                 setButtonText('Entrar')
                 setButtonTextRegister('Enviar')
                 setButtonIcon()
-                setButtonBackground("bg-[#0101FF]")
+                setButtonBackground("bg-[#00C]")
                 break
         }
     }, [status])
@@ -204,11 +204,11 @@ export default function Login() {
                     <div className="w-full max-w-[450px] h-full rounded-left bg-primary flex flex-col items-center py-5 px-2 gap-5 sm:p-10">
                         <img src={logoOminigo} />
                         <div className='w-[161px] min-h-[42px] bg-secondary flex flex-row gap-3 text-primary font-medium p-[5px]'>
-                            <button className={`w-full transition-all ${register ? 'bg-transparent' : 'bg-white'}`} onClick={() => setRegister(false)}>
+                            <button className={`w-full transition-all ${register ? 'bg-transparent' : 'bg-white'} hover:text-[#0101FF]`} onClick={() => setRegister(false)}>
                                 Login
                             </button>
 
-                            <button className={`w-full transition-all duration-1000 ${register ? 'bg-white' : 'bg-transparent'}`} onClick={() => setRegister(true)}>
+                            <button className={`w-full transition-all duration-1000 ${register ? 'bg-white' : 'bg-transparent'} hover:text-[#0101FF]`} onClick={() => setRegister(true)}>
                                 Register
                             </button>
                         </div>
@@ -234,11 +234,11 @@ export default function Login() {
                                 </li>
 
                                 <li>
-                                    <p className='cursor-pointer'>Esqueceu a Senha?</p>
+                                    <p className='cursor-pointer hover:text-[#0101FF]'>Esqueceu a Senha?</p>
                                 </li>
                             </ul>
 
-                            <button type='submit' className= {`w-full h-[35px] ${buttonBackground} text-white  flex flex-row justify-center items-center gap-2 ${status == 'idle' ? 'hover:#0101FF' : ''}`}>
+                            <button type='submit' className= {`w-full h-[35px] ${buttonBackground} transition-colors duration-500 ${status == 'idle' ? ' hover:bg-[#0101FF]' : ''} text-white  flex flex-row justify-center items-center gap-2`}>
                                 <img src={buttonIcon}  className={`transition-all ${status == 'idle' ? 'hidden' : 'flex'} ${status == 'loading' && 'animate-spin'}`} alt='Button-Icons'/>
                                 <span>
                                     {buttontext}
@@ -274,7 +274,7 @@ export default function Login() {
 
 
 
-                            <button type='submit' className= {`w-full h-[35px] ${buttonBackground} text-white  flex flex-row justify-center items-center gap-2`}>
+                            <button type='submit' className= {`w-full h-[35px] ${buttonBackground} transition-colors duration-500 ${status == 'idle' ? ' hover:bg-[#0101FF]' : ''} text-white  flex flex-row justify-center items-center gap-2`}>
                                 <img src={buttonIcon}  className={`transition-all ${status == 'idle' ? 'hidden' : 'flex'} ${status == 'loading' && 'animate-spin'}`} alt='Button-Icons'/>
                                 <span>
                                     {buttontextRegister}
