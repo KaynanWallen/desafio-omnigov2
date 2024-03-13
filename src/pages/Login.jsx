@@ -128,7 +128,7 @@ export default function Login() {
 
     //Uma "Requisição" falsa para fins de teste
     const RequisicaoBackEnd = () => {
-        if (loginEmail == 'vittel' && loginPassword == '1234') {
+        if (loginEmail == 'vittel@gmail.com.br' && loginPassword == '1234') {
             return true
         }
         return false
