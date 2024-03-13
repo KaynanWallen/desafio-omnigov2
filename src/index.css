@@ -45,29 +45,6 @@ h2 {
   position: absolute;
 }
 
-
-
-/* .custom-checkbox input {
-  display: none;
-}
-
-.custom-checkbox input + label::before {
-  content: '';
-  width: 18px;
-  height: 18px;
-  border-radius: 4px;
-  background-color: white;
-  border: 1px solid gray;
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 2px;
-  margin-right: 4px;
-}
-
-.custom-checkbox input:checked + label::before{
-  background-color: red;
-} */
-
 #root {
   background-color: #F0F3FF;
   width: 100vw;
