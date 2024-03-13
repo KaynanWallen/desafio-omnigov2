@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(-360deg);
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 0;
+  position: relative;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+  background-color: blue;
+  color: white;
+}
+
+.custom-checkbox input[type="checkbox"]:checked::before {
+  content: "✓";
+  top: -3px;
+  right: 2.5px;
+  position: absolute;
+}
+
+
+
+/* .custom-checkbox input {
+  display: none;
+}
+
+.custom-checkbox input + label::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid gray;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 2px;
+  margin-right: 4px;
+}
+
+.custom-checkbox input:checked + label::before{
+  background-color: red;
+} */
+
+#root {
+  background-color: #F0F3FF;
+  width: 100vw;
+  height: 100vh;
+}
