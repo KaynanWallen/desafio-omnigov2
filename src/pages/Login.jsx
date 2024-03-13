@@ -238,7 +238,7 @@ export default function Login() {
                                 </li>
                             </ul>
 
-                            <button type='submit' className= {`w-full h-[35px] ${buttonBackground} text-white  flex flex-row justify-center items-center gap-2`}>
+                            <button type='submit' className= {`w-full h-[35px] ${buttonBackground} text-white  flex flex-row justify-center items-center gap-2 ${status == 'idle' ? 'hover:#0101FF' : ''}`}>
                                 <img src={buttonIcon}  className={`transition-all ${status == 'idle' ? 'hidden' : 'flex'} ${status == 'loading' && 'animate-spin'}`} alt='Button-Icons'/>
                                 <span>
                                     {buttontext}
