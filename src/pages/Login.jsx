@@ -128,7 +128,7 @@ export default function Login() {
 
     //Uma "Requisição" falsa para fins de teste
     const RequisicaoBackEnd = () => {
-        if (loginEmail == 'vittel@gmail.com.br' && loginPassword == '1234') {
+        if (loginEmail == 'vittel' && loginPassword == '1234') {
             return true
         }
         return false
@@ -201,19 +201,19 @@ export default function Login() {
         <>
             <main className="w-full h-full flex justify-center items-center">
                 <section className={`w-full max-w-[900px] transition-all duration-1000 ${register ? 'h-[521px]' : 'h-[443px]'} flex justify-center px-2 transition-all `}>
-                    <div className="w-full max-w-[450px] h-full rounded-left bg-primary flex flex-col items-center py-5 px-2 gap-5 sm:p-10">
+                    <div className="w-full max-w-[450px] h-full rounded-[20px] bg-primary flex flex-col items-center py-5 px-2 gap-5 md:rounded-left sm:p-10">
                         <img src={logoOminigo} />
                         <div className='w-[161px] min-h-[42px] bg-secondary flex flex-row gap-3 text-primary font-medium p-[5px]'>
-                            <button className={`w-full transition-all ${register ? 'bg-transparent' : 'bg-white'} hover:text-[#0101FF]`} onClick={() => setRegister(false)}>
+                            <button className={`w-full transition-all ${register ? 'bg-transparent' : 'bg-white'} rounded-[3px] hover:text-[#0101FF]`} onClick={() => setRegister(false)}>
                                 Login
                             </button>
 
-                            <button className={`w-full transition-all duration-1000 ${register ? 'bg-white' : 'bg-transparent'} hover:text-[#0101FF]`} onClick={() => setRegister(true)}>
-                                Register
+                            <button className={`w-full transition-all duration-1000 ${register ? 'bg-white' : 'bg-transparent'} rounded-[3px] hover:text-[#0101FF]`} onClick={() => setRegister(true)}>
+                                Registrar
                             </button>
                         </div>
             
-                        <form className= {`w-full transition-all duration-1000  ${!register ? 'h-[252px]' : 'h-[330px]'} bg-secondary ${!register ? 'opacity-100 flex' : 'opacity-0 hidden'} flex-col justify-center p-5 gap-5`} onSubmit={HandleSubmitlogin}>
+                        <form className= {`w-full transition-all duration-1000  ${!register ? 'h-[252px]' : 'h-[330px]'} bg-secondary ${!register ? 'opacity-100 flex' : 'opacity-0 hidden'} flex-col justify-center p-5 gap-5 rounded-[10px]`} onSubmit={HandleSubmitlogin}>
                             
                             
                             <section className='w-full h-[36px] bg-white flex flex-row items-center justify-center px-3'>
@@ -251,7 +251,7 @@ export default function Login() {
                             </section>
                         </form>
 
-                        <form className= {`w-full transition-all duration-1000  ${!register ? 'h-[252px]' : 'h-[330px]'} bg-secondary ${register ? 'opacity-100 flex' : 'opacity-0 hidden'} flex-col justify-center p-5 gap-5`} onSubmit={HandleSubmitRegister}>
+                        <form className= {`w-full transition-all duration-1000  ${!register ? 'h-[252px]' : 'h-[330px]'} bg-secondary ${register ? 'opacity-100 flex' : 'opacity-0 hidden'} flex-col justify-center p-5 gap-5 rounded-[10px]`} onSubmit={HandleSubmitRegister}>
                             <section className='w-full h-[36px] bg-white flex flex-row items-center justify-center px-3'>
                                 <UserIcon color = {`${registerName == "" ? '#94A3B8' : '#1E293B'}`} />
                                 <input type='text' value={registerName} onChange={handleRegisterName} className='w-full h-full outline-none bg-white px-3' placeholder='Nome Completo' required/>
@@ -289,7 +289,9 @@ export default function Login() {
                     </div>
 
                     <div className='hidden w-full h-full bg-white rounded-right p-10 flex-col gap-[10px] md:flex'>
-                        <h2 className=' text-primary'>Bem-vindo de volta!</h2>
+                        <h2 className=' text-primary'>
+                            {register ? 'Bem-vindo!' : 'Bem-vindo de volta!'}
+                        </h2>
                         <p className=' font-normal text-primary'>Entre e potencialize sua empresa através do poder das conversas.</p>
                         <img src={computer} />
                     </div>
