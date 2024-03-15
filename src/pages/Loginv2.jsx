@@ -21,9 +21,11 @@ import UserIcon from '../components/UserIcon'
 import {
     Card,
     CardContent,
+    CardDescription,
+    CardFooter,
     CardHeader,
+    CardTitle,
 } from "@/components/ui/card"
-
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
@@ -31,7 +33,9 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 
-export default function Login() {
+
+export default function Loginv2() {
+    const [register, setRegister] = useState(false)
     const [status, setStatus] = useState("idle")
 
 
@@ -86,16 +90,14 @@ export default function Login() {
     }, [status])
 
 
-    //Alterações no Input de Login Email
     const handleChangeLoginEmail = (ev) => {
         setloginEmail(ev.target.value)
     }
-    //Alterações no Input de Password
+
     const handleChangeLoginPassword = (ev) => {
         setLoginPassword(ev.target.value)
     }
 
-    //Alterações no Input de Name
     const handleRegisterName = (ev) => {
         setRegisterName(ev.target.value)
     }
@@ -119,6 +121,7 @@ export default function Login() {
 
 
     //UTILS
+
     const FormattedPhone = (v) => {
         v = v.replace(/\D/g, "");
         v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
@@ -197,24 +200,31 @@ export default function Login() {
     }
 
 
+    const HandleChangeTrigger = () => {
+        console.log(teste)
+    }
     return (
         <>
             <main className="w-full min-h-screen bg-background flex justify-center items-center p-1 md:p-5">
-                <Tabs defaultValue="login" className='w-full h-auto flex flex-row justify-center'>
-                
+                <section className='w-full h-auto flex flex-row justify-center'>
                     <Card className="w-full max-w-[450px] min-h-full bg-primary rounded-[20px] flex flex-col gap-[20px] justify-center md:rounded-left p-5 py-[20px] sm:p-[40px]">
                         <CardHeader>
                             <img src={logoOminigo} className="w-[150px]" />
                         </CardHeader>
 
-                        <CardContent className="w-full max-w-[450px] flex flex-col items-center gap-[20px] p-0">
+                        <CardContent className="p-0">
+                            <Tabs defaultValue="login" className="w-full max-w-[450px] flex flex-col items-center gap-[20px]" >
                                 <TabsList className="flex flex-row items-center justify-center w-[160px] bg-secondary text-primary ">
+                                    <span className='w-full h-full inline-flex items-center justify-center'>
                                         <TabsTrigger value="login">
                                             Login
                                         </TabsTrigger>
+                                    </span>
+                                    <span className='w-full h-full inline-flex items-center justify-center'>
                                         <TabsTrigger value="register">
                                             Registrar
                                         </TabsTrigger>
+                                    </span>
                                 </TabsList>
 
 
@@ -242,20 +252,14 @@ export default function Login() {
                                                         <Label className="cursor-pointer hover:text-vitblue-700">Esqueceu a Senha?</Label>
                                                     </li>
                                                 </ul>
-
-
                                                 <Button className=" flex flex-row gap-2 " type="submit" variant={`${buttonVariant}`}>
                                                     <img src={buttonIcon} className={`${status == 'idle' | 'default' ? 'hidden' : 'flex'} ${status == 'loading' && 'animate-spin'}      `} />
                                                     {buttontext}
                                                 </Button>
-
-
                                                 <section className='w-full flex flex-row items-center justify-center gap-2'>
                                                     <p className=' text-[10px] text-primary'>Um produto</p>
                                                     <img src={logoinicial} />
                                                 </section>
-
-
                                             </form>
                                         </CardContent>
                                     </Card>
@@ -298,9 +302,7 @@ export default function Login() {
                                         </CardContent>
                                     </Card>
                                 </TabsContent>
-
-    
-                            
+                            </Tabs >
                         </CardContent>
 
                     </Card>
@@ -308,19 +310,13 @@ export default function Login() {
                     <Card className="w-full max-w-[450px] min-h-full bg-white rounded-[20px] hidden md:flex md:rounded-right p-[40px]">
                         <CardContent className="flex flex-col h-full justify-center gap-[10px] p-0">
                             <h2 className=' text-[30px] text-primary font-semibold'>
-                                <TabsContent value="login" className="w-full h-auto bg-transparent" >
-                                    Bem-vindo de volta!
-                                </TabsContent>
-                                <TabsContent value="register" className="w-full h-auto bg-transparent" >
-                                    Bem-vindo!
-                                </TabsContent>
+                                {document.getElementById("Form-login").getAttribute("data-state") == 'active' ? 'Bem-vindo!' : 'Bem-vindo de volta!'}
                             </h2>
                             <p className='text-[14px] text-primary'>Entre e potencialize sua empresa através do poder das conversas.</p>
-                            <img src={computer} className="h-[260px]"/>
+                            <img src={computer} className={`${register ? 'h-[337px]' : 'h-[261px]'}`} />
                         </CardContent>
                     </Card>
-                </Tabs>
-                
+                </section>
             </main>
         </>
     )
