@@ -64,7 +64,10 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-            screens: { 
+      fontFamily: {
+        primary: ['Inter', 'sans-serif'],
+      },
+      screens: { 
         'sm' : '500px',
         'md' : '950px'
       },

@@ -2,49 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
+* {
   border-radius: 6px;
   font-size: 14px;
   font-weight: 500;
 }
-
-h2 {
-  font-size: 30px;
-  font-weight: 600;
-}
-
-@keyframes spin {
-  to {
-      transform: rotate(-360deg);
-  }
-}
-.animate-spin {
-  animation: spin 1s linear infinite;
-}
-
-.custom-checkbox input[type="checkbox"] {
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  background-color: white;
-  border-radius: 2px;
-  position: relative;
-  cursor: pointer;
-  transition: 500ms;
-}
-
-.custom-checkbox input[type="checkbox"]:checked {
-  background-color: blue;
-  color: white;
-}
-
-.custom-checkbox input[type="checkbox"]:checked::before {
-  content: "✓";
-  top: -3px;
-  right: 2.5px;
-  position: absolute;
-}
-*/
 
 #root {
   width: 100vw;
