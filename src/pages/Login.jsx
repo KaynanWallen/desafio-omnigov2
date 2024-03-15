@@ -208,11 +208,11 @@ export default function Login() {
                         </CardHeader>
 
                         <CardContent className="w-full max-w-[450px] flex flex-col items-center gap-[20px] p-0">
-                                <TabsList className="flex flex-row items-center justify-center w-[160px] bg-secondary text-primary ">
-                                        <TabsTrigger value="login">
+                                <TabsList className="flex flex-row items-center justify-center w-[160px] h-[42px] p-[5px] gap-[5px] bg-secondary text-primary ">
+                                        <TabsTrigger value="login" className="text-[14px]">
                                             Login
                                         </TabsTrigger>
-                                        <TabsTrigger value="register">
+                                        <TabsTrigger value="register" className="text-[14px]">
                                             Registrar
                                         </TabsTrigger>
                                 </TabsList>
@@ -307,11 +307,11 @@ export default function Login() {
 
                     <Card className="w-full max-w-[450px] min-h-full bg-white rounded-[20px] hidden md:flex md:rounded-right p-[40px]">
                         <CardContent className="flex flex-col h-full justify-center gap-[10px] p-0">
-                            <h2 className=' text-[30px] text-primary font-semibold'>
-                                <TabsContent value="login" className="w-full h-auto bg-transparent" >
+                            <h2 className='text-primary'>
+                                <TabsContent value="login" className="w-full h-auto bg-transparent font-semibold text-[30px]" >
                                     Bem-vindo de volta!
                                 </TabsContent>
-                                <TabsContent value="register" className="w-full h-auto bg-transparent" >
+                                <TabsContent value="register" className="w-full h-auto bg-transparent font-semibold text-[30px]" >
                                     Bem-vindo!
                                 </TabsContent>
                             </h2>
