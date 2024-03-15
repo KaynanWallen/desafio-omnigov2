@@ -200,9 +200,8 @@ export default function Login() {
 
     return (
         <>
-            <main className="w-full min-h-screen bg-background flex justify-center items-center p-1 md:p-5">
+            <main className="w-full min-h-screen bg-background flex justify-center items-center p-1 md:p-2 lg:pd-5">
                 <Tabs defaultValue="login" className='w-full h-auto flex flex-row justify-center'>
-                
                     <Card className="w-full max-w-[450px] min-h-full bg-primary rounded-[20px] flex flex-col gap-[20px] justify-center md:rounded-left p-5 py-[20px] sm:p-[40px]">
                         <CardHeader>
                             <img src={logoOminigo} className="w-[150px]" />
@@ -321,8 +320,8 @@ export default function Login() {
                                 <img src={computer} className="h-[260px]"/>
                             </TabsContent>
 
-                            <TabsContent value="register" className="w-auto h-auto bg-transparent" >
-                                <img src={computer2} className="h-[370px]"/>
+                            <TabsContent value="register" className="bg-transparent" >
+                                <img src={computer2} />
                             </TabsContent>
                         </CardContent>
                     </Card>
