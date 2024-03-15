@@ -322,7 +322,7 @@ export default function Login() {
                             </TabsContent>
 
                             <TabsContent value="register" className="w-auto h-auto bg-transparent" >
-                                <img src={computer2} />
+                                <img src={computer2} className="h-[370px]"/>
                             </TabsContent>
                         </CardContent>
                     </Card>
