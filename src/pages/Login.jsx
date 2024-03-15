@@ -317,11 +317,11 @@ export default function Login() {
                                 </TabsContent>
                             </h2>
                             <p className='text-[14px] text-primary'>Entre e potencialize sua empresa através do poder das conversas.</p>
-                            <TabsContent value="login" className="w-auto h-auto" >
+                            <TabsContent value="login" className="w-full h-auto flex items-center  justify-center bg-transparent" >
                                 <img src={computer} className="h-[260px]"/>
                             </TabsContent>
 
-                            <TabsContent value="register" className="w-auto h-auto" >
+                            <TabsContent value="register" className="w-auto h-auto bg-transparent" >
                                 <img src={computer2} />
                             </TabsContent>
                         </CardContent>
