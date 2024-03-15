@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import logoOminigo from '/assets/logoomnigo.svg'
 import logoinicial from '/assets/logo-inicial.svg'
 import computer from '/assets/computer.png'
+import computer2 from '/assets/computer2.png'
 import loading from '/assets/loading.png'
 import sucess from '/assets/sucess.svg'
 import error from '/assets/error.svg'
@@ -316,7 +317,13 @@ export default function Login() {
                                 </TabsContent>
                             </h2>
                             <p className='text-[14px] text-primary'>Entre e potencialize sua empresa através do poder das conversas.</p>
-                            <img src={computer} className="h-[260px]"/>
+                            <TabsContent value="login" className="w-auto h-auto" >
+                                <img src={computer} className="h-[260px]"/>
+                            </TabsContent>
+
+                            <TabsContent value="register" className="w-auto h-auto" >
+                                <img src={computer2} />
+                            </TabsContent>
                         </CardContent>
                     </Card>
                 </Tabs>
