@@ -209,10 +209,10 @@ export default function Login() {
 
                         <CardContent className="w-full max-w-[450px] flex flex-col items-center gap-[20px] p-0">
                                 <TabsList className="flex flex-row items-center justify-center w-[160px] h-[42px] p-[5px] gap-[5px] bg-secondary text-primary ">
-                                        <TabsTrigger value="login" className="text-[14px]">
+                                        <TabsTrigger value="login" className="text-[14px] font-medium">
                                             Login
                                         </TabsTrigger>
-                                        <TabsTrigger value="register" className="text-[14px]">
+                                        <TabsTrigger value="register" className="text-[14px] font-medium">
                                             Registrar
                                         </TabsTrigger>
                                 </TabsList>
@@ -235,11 +235,11 @@ export default function Login() {
                                                 <ul className='w-full text-vitblue-800 flex flex-row justify-between'>
                                                     <li className='flex flex-row items-center gap-2 custom-checkbox'>
                                                         <Checkbox name="lembrar" className="rounded-[2px]" />
-                                                        <Label htmlFor="lembrar">Lembrar-me</Label>
+                                                        <Label htmlFor="lembrar font-medium">Lembrar-me</Label>
                                                     </li>
 
                                                     <li>
-                                                        <Label className="cursor-pointer hover:text-vitblue-700">Esqueceu a Senha?</Label>
+                                                        <Label className="cursor-pointer hover:text-vitblue-700 font-medium">Esqueceu a Senha?</Label>
                                                     </li>
                                                 </ul>
 
